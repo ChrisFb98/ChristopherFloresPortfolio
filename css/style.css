@@ -255,6 +255,8 @@ body {
   width: 345px;
   height: 67px;
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container .tech-skills article h2 {
   font-size: 32px;
