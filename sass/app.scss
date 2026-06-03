@@ -1,0 +1,558 @@
+@import './abstracts/abstracts';
+@import './vendors/vendors';
+@import './base/base';
+@import './components/components';
+@import './layout/layout';
+@import './pages/pages';
+@import './themes/themes';
+@import 'settings';
+
+.container{
+    width: 100%;
+    background-color: $black;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    @include breakpoint(tablet){
+        width: 100%;
+    }
+    .nav-bar{
+        display: flex;
+        flex-direction: column;
+        color: $white;
+        font-family: $space-grotesk;
+        @include breakpoint(tablet){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1;
+        }
+        .dev-name{
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            @include breakpoint(tablet){
+                margin-left: 30px;
+            }
+        }
+        .links{
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            gap: 20px;
+            @include breakpoint(tablet){
+                margin-right: 30px;
+            }
+            img{
+                width: 20px;
+                height: 20px;
+                @include breakpoint(tablet){
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+    .hero{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        @include breakpoint(tablet){
+            width: 100%;
+        }
+        .my-photo{
+            display: flex;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px;
+            margin-top: 20px;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            width: 154px;
+            height: 252px;
+            z-index: 1;
+            @include breakpoint(tablet){
+                position: absolute;
+                width: 268px;
+                height: 464px;
+                z-index: 0;
+                top: -100px;
+                right: 0px;
+                box-shadow: 0 5px 15px 5px $green;
+            }
+        }
+        .bg-spiral{
+            position: absolute;
+            top: 40px;
+            left: -20px;
+            z-index: 0;
+            @include breakpoint(tablet){
+                top: -30px;
+            }
+        }
+        .bg-circle{
+            position: absolute;
+            top: 120px;
+            right: -20px;
+            width: 90px;
+            height: 139px;
+            z-index: 0;
+            @include breakpoint(tablet){
+                top: 250px;
+            }
+        }
+        &-content{
+            display: flex;
+            flex-direction: column;
+            width: 375px;
+            margin-left: auto;
+            margin-right: auto;
+            @include breakpoint(tablet){
+                width: 555px;
+            }
+            &-title{
+                width: 343px;
+                display: flex;
+                flex-direction: column;
+                font-family: $space-grotesk;
+                color: white;
+                font-size: 32px;
+                font-weight: 700;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                span{
+                    text-decoration: underline;
+                    text-decoration-color: $green;
+                    text-decoration-thickness: 4px;
+                    text-decoration-style: solid;
+                    text-underline-offset: 8px;
+                }
+                @include breakpoint(tablet){
+                    font-size: 62px;
+                    width: 605px;
+                    margin-left: 30px;
+                    margin-right: 0px;
+                    margin-top: 40px;
+                    text-align: left;
+                    z-index: 1;
+                }
+            }
+            &-desc{
+                font-family: $space-grotesk;
+                color: $gray;
+                width: 343px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-weight: 200;
+                font-size: 16px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                @include breakpoint(tablet){
+                    width: 505px;
+                    text-align:left;
+                    font-size: 18px;
+                    z-index: 1;
+                    margin-left: 30px;
+                }
+            }
+            &-link{
+                font-family: $space-grotesk;
+                color: $white;
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: 2px;
+                width: 120px;
+                height: 38px;
+                text-decoration: underline;
+                text-decoration-line:round($number: 5);
+                text-decoration-color: $green;
+                text-decoration-thickness: 2px;
+                text-underline-offset: 15px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 50px;
+                @include breakpoint(tablet){
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+    .hero::after{
+        content: "";
+        display: block;
+        width: 95%;
+        height: 1px;
+        background-color: $gray;
+        margin-left: auto;
+        margin-right: auto;
+        @include breakpoint(tablet){
+            width: 95%;
+        }
+    }
+    .tech-skills{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        @include breakpoint(tablet){
+            display: flex;
+            flex-wrap: wrap;
+            text-align: left;
+            width: 100%;
+            height: 451px;
+            margin-left: 30px;
+        }
+        article{
+            width: 345px;
+            height: 67px;
+            margin-top: 30px;
+            h2{
+                font-size: 32px;
+                font-family: $space-grotesk;
+                color: $white;
+                font-weight: 500;
+                @include breakpoint(tablet){
+                    margin-bottom: 20px;
+                }
+            }
+            p{
+                font-size: 16px;
+                font-family: $space-grotesk;
+                color: $gray;
+                font-weight: 300;
+                @include breakpoint(tablet){
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        .javascript{
+            margin-bottom: 35px;
+        }
+    }
+    .tech-skills::after{
+        content: "";
+        display: block;
+        width: 95%;
+        height: 1px;
+        background-color: $gray;
+        margin-left: auto;
+        margin-right: auto;
+        @include breakpoint(tablet){
+            width: 95%;
+            margin-left: 0;
+        }
+    }
+    .bg-spiral-2{
+        position: absolute;
+        top: 1210px;
+        right: 0px;
+        @include breakpoint(tablet){
+            top: 900px;
+        }
+    }
+    .projects{
+        width: 100%;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        @include breakpoint(tablet){
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .projects-header{
+            display: flex;
+            width: 375px;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 60px;
+            margin-bottom: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            @include breakpoint(tablet){
+                width: 768px;
+                position: absolute;
+                top: -60px;
+                right: 0;
+                justify-content: space-between;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            &-title{
+                font-size: 40px;
+                font-family: $space-grotesk;
+                color: $white;
+            }
+            &-link{
+                font-family: $space-grotesk;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                color: $white;
+                text-decoration-thickness: 2px;
+                text-decoration-color: $green;
+                text-underline-offset: 12px;
+                @include breakpoint(tablet){
+                    
+                }
+            }
+        }
+        article{
+            display: flex;
+            flex-direction: column;
+            height: 430px;
+            @include breakpoint(tablet){
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 80px;
+            }
+        }
+        article .project-title{
+            font-family: $space-grotesk;
+            font-size: 24px;
+            font-weight: 700;
+            color: $white;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        article .project-stack{
+            display: flex;
+            gap: 20px;
+            font-family: $space-grotesk;
+            font-size: 16px;
+            font-weight: 400;
+            color: $gray;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+        article .project-source{
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+            gap: 20px;
+                a{
+                font-family: $space-grotesk;
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 2px;
+                color: $white;
+                text-decoration-thickness: 2px;
+                text-decoration-color: $green;
+                text-underline-offset: 12px;
+                }
+        }
+        article img{
+            display: flex;
+            width: 343px;
+            height: 253px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    }
+    .footer{
+        width: 100%;
+        background-color: $dark-gray;
+        @include breakpoint(tablet){
+            width: 100%;
+        }
+        .contact{
+            display: flex;
+            flex-direction: column;
+            &-title{
+                font-family: $space-grotesk;
+                font-size: 40px;
+                color: $white;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+                margin-bottom: 20px;
+                @include breakpoint(tablet){
+                    font-size: 72px;
+                }
+            }
+            &-desc{
+                width: 343px;
+                text-align: center;
+                font-family: $space-grotesk;
+                font-size: 16px;
+                color: $gray;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 50px;
+                @include breakpoint(tablet){
+                    font-size: 18px;
+                    width: 445px;
+                }
+            }
+        }
+        .formulario{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            .nombre{
+                width: 343px;
+                height: 43px;
+                color: $white;
+                background-color: transparent;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: solid 1.5px $white;
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 20px;
+                font-size: 16px;
+                &:focus{
+                    border-bottom: solid 1px $green;
+                    outline: none;
+                }
+                @include breakpoint(tablet){
+                    width: 445px;
+                    margin-bottom: 30px;
+                }
+            }
+            .correo{
+                width: 343px;
+                height: 43px;
+                color: $white;
+                background-color: transparent;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: solid 1.5px $white;
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 20px;
+                font-size: 16px;
+                &:focus{
+                    border-bottom: solid 1px $green;
+                    outline: none;
+                }
+                &:invalid{
+                    border-bottom: solid 1px red;
+                }
+                @include breakpoint(tablet){
+                    width: 445px;
+                    margin-bottom: 30px;
+                }
+            }
+            .mensaje{
+                width: 343px;
+                height: 107px;
+                color: $white;
+                background-color: transparent;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: solid 1.5px $white;
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 20px;
+                font-size: 16px;
+                &:focus{
+                    outline: none;
+                    border-bottom: solid 1px $green;
+                }
+                @include breakpoint(tablet){
+                    width: 445px;
+                }
+            }
+            .enviar{
+                display: flex;
+                justify-self:right;
+                width: 144px;
+                height: 43px;
+                background-color: transparent;
+                font-family: $space-grotesk;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: solid 2px $green;
+                color: white;
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: 16px;
+                font-size: 16px;
+                letter-spacing: 2px;
+                cursor: pointer;
+                @include breakpoint(tablet){
+                    margin-right: 160px;
+                    margin-top: 20px;
+                }
+            }
+            .bg-spiral-3{
+                position: absolute;
+                left: 0px;
+                top: 200px;
+                @include breakpoint(tablet){
+                    top: 250px;
+                }
+            }
+        }
+        .formulario::after{
+            content: "";
+            width: 95%;
+            height: 1px;
+            background-color: $white;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            @include breakpoint(tablet){
+                width: 95%;
+                margin-top: 80px;
+            }
+        }
+        .footer-info{
+            display: flex;
+            flex-direction: column;
+            @include breakpoint(tablet){
+                flex-direction: row;
+                align-items: center;
+            }
+            .dev-name-2{
+                font-family: $space-grotesk;
+                font-size: 24px;
+                color: $white;
+                margin-top: 40px;
+                margin-left: auto;
+                margin-right: auto;
+                @include breakpoint(tablet){
+                    margin-top: 0;
+                }
+            }
+            .footer-links{
+                display: flex;
+                width: 200px;
+                justify-content: space-evenly;
+                margin-top: 30px;
+                margin-bottom: 40px;
+                margin-left: auto;
+                margin-right: auto;
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
